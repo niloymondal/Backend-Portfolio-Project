@@ -37,7 +37,7 @@ app.use("/api/v1/advantage", advantageRoutes);
 app.use("/api/v1/comments", commentRoutes);
 app.use("/api/v1/education", educationRoutes);
 app.use("/api/v1/experience", experienceRoutes);
-app.use("/api/v1", portfolioRoutes);
+app.use("/api/v1/portfolio", portfolioRoutes);
 app.use("/api/v1/services", serviceRoutes);
 app.use("/api/v1/testimonials", testimonialRoutes);
 app.use("/api/v1", userRoutes);

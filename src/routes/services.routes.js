@@ -4,10 +4,10 @@ const validateUser = require("../middlewares/validation.middleware.js");
 
 const router = express.Router();
 
-router.post("/services", validateUser, serviceController.createService);
-router.get("/services", serviceController.getAllServices);
-router.get("/services/:id", serviceController.getSingleService);
-router.put("/services/:id", validateUser, serviceController.updateSingleService);
-router.delete("/services/:id", validateUser, serviceController.deleteSingleService);
+router.post("/", validateUser, serviceController.createService);
+router.get("/", serviceController.getAllServices);
+router.get("/:id", serviceController.getSingleService);
+router.put("/:id", validateUser, serviceController.updateSingleService);
+router.delete("/:id", validateUser, serviceController.deleteSingleService);
 
 module.exports = router;

@@ -5,10 +5,10 @@ const upload = require("../config/multer.config.js");
 
 const router = express.Router();
 
-router.post("/portfolio", validateUser, upload.single("img"), portfolioController.createPortfolio);
-router.get("/portfolio", portfolioController.getAllPortfolios);
-router.get("/portfolio/:id", portfolioController.getSinglePortfolio);
-router.put("/portfolio/:id", validateUser, portfolioController.updateSinglePortfolio);
-router.delete("/portfolio/:id", validateUser, portfolioController.deleteSinglePortfolio);
+router.post("/", validateUser, upload.single("img"), portfolioController.createPortfolio);
+router.get("/", portfolioController.getAllPortfolios);
+router.get("/:id", portfolioController.getSinglePortfolio);
+router.put("/:id", validateUser, portfolioController.updateSinglePortfolio);
+router.delete("/:id", validateUser, portfolioController.deleteSinglePortfolio);
 
 module.exports = router;

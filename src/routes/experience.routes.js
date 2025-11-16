@@ -4,10 +4,10 @@ const validateUser = require("../middlewares/validation.middleware.js");
 
 const router = express.Router();
 
-router.post("/experience", validateUser, experienceController.createExperience);
-router.get("/experience", experienceController.getAllExperience);
-router.get("/experience/:id", experienceController.getSingleExperience);
-router.put("/experience/:id", validateUser, experienceController.updateSingleExperience);
-router.delete("/experience/:id", validateUser, experienceController.deleteSingleExperience);
+router.post("/", validateUser, experienceController.createExperience);
+router.get("/", experienceController.getAllExperience);
+router.get("/:id", experienceController.getSingleExperience);
+router.put("/:id", validateUser, experienceController.updateSingleExperience);
+router.delete("/:id", validateUser, experienceController.deleteSingleExperience);
 
 module.exports = router;

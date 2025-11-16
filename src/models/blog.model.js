@@ -6,6 +6,10 @@ const blogSchema = new mongoose.Schema({
     category: {type: String},
     description: {type: String},
     short_description: {type: String},
+    // author: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'User'
+    // }
     
 },
 {
